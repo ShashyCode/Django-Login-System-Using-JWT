@@ -32,9 +32,9 @@ class SignupView(APIView):
             if serializer.is_valid():
                 serializer.save()
 
-               # messages.success(request, "The User has been created!")
-            #return redirect("login")
-                return Response(serializer.data)
+                messages.success(request, "The User has been created!")
+            return redirect("login")
+                #return Response(serializer.data)
 
             
 
